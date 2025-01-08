@@ -59,3 +59,42 @@
   align-items: center;
   justify-content: center;
 }
+
+.question-list {
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: #282c34;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px 40px;
+  margin: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.backButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.questionsButton {
+  background-color: #282c34;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 40px 80px;
+  margin: 20px;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.questionsButton a {
+  color: white;
+  text-decoration: none;
+}

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import questions from './questions';
 import ScanYourCard from './scanYourCard';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 // Child component to display each item
 
 
@@ -36,7 +38,9 @@ function ItemList() {
     };
 
     return (
-        <div>
+        <div className='questionList'>
+            <button className='backButton'> <Link to="/home">Home</Link></button>
+
             <span> score: {score}</span>
             <br />
             {answeredQuestions < 5 ? (
