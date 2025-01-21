@@ -6,10 +6,14 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // Child component to display each item
 
-
 // Parent component with an array of objects
 function ItemList() {
+    const searchParams = new URLSearchParams(document.location.search);
+    const currentParam = searchParams.get('type');
+
     const selectQuestion = () => {
+        console.log(currentParam);
+        console.log(items);
         if (items.length > 0) {
             const randomIndex = Math.floor(Math.random() * items.length);
             const selectedItem = items[randomIndex];
@@ -25,8 +29,7 @@ function ItemList() {
     const [selectedItem, setSelectedItem] = useState(null);
     const [score, setScore] = useState(0);
     const [answeredQuestions, setansweredQuestions] = useState(0);
-    const [items, setItems] = useState(questions);
-
+    const [items, setItems] = useState(questions[searchParams.get('type')]);
 
     const handleQuestionUpdate = (updatedInfo) => {
 
@@ -39,9 +42,8 @@ function ItemList() {
 
     return (
         <div className='questionList'>
-            <button className='backButton'> <Link to="/home">Home</Link></button>
+            <button className='backButton'> <Link to="/">Home</Link></button>
 
-            <span> score: {score}</span>
             <br />
             {answeredQuestions < 5 ? (
                 selectedItem && (
@@ -53,7 +55,7 @@ function ItemList() {
                         onUpdate={handleQuestionUpdate}
                     />
                 )
-            ) : (<ScanYourCard />)}
+            ) : (<ScanYourCard result={score} />)}
         </div>
     );
 }
