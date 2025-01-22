@@ -15,8 +15,13 @@ function Question({ name, description, onUpdate, answers, correctAnswer }) {
         <div >
             <h2>{name}</h2>
             <p>{description}</p>
-            {answers.map(currentAnswer => (
-                <button className="answerButton" onClick={() => handleUpdate(currentAnswer)}>{currentAnswer}</button>
+            {answers.map((currentAnswer) => (
+                <button
+                    className={`answerButton ${currentAnswer === 'a' ? 'answerButtonA' : 'answerButtonB'}`}
+                    onClick={() => handleUpdate(currentAnswer)}
+                >
+                    {currentAnswer}
+                </button>
             ))}
         </div>
     );

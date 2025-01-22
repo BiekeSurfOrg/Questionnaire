@@ -3,8 +3,6 @@ import Card from './Card';
 
 const Home = () => {
 
-
-
     return (
         <div className="full-screen">
             <div className="full-screen layout">
