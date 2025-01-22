@@ -72,6 +72,9 @@
 
 .question-list {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .backButton {
@@ -181,4 +184,8 @@
 
 .body {
   font-family: sans-serif;
+}
+
+.direction-left {
+  transform: rotate(180deg);
 }

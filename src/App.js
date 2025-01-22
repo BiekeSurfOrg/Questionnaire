@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="App-layout">
-          <div className="App-content">
+          <div>
             <Routes>
               <Route path="/questions" element={<QuestionList />} />
               <Route path="/" element={<Home />} />

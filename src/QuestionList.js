@@ -3,6 +3,7 @@ import Question from './Question';
 import questions from './questions';
 import ScanYourCard from './scanYourCard';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HeaderComp from "./HeaderComp";
 
 // Child component to display each item
 
@@ -41,21 +42,25 @@ function ItemList() {
     };
 
     return (
-        <div className='questionList'>
+        <div className='question-list full-screen'>
+            <HeaderComp />
             <button className='backButton'> <Link to="/">Home</Link></button>
 
-            <br />
             {answeredQuestions < 5 ? (
                 selectedItem && (
-                    <Question
-                        name={selectedItem.name}
-                        description={selectedItem.description}
-                        answers={selectedItem.answers}
-                        correctAnswer={selectedItem.correctAnswer}
-                        onUpdate={handleQuestionUpdate}
-                    />
+                    <div>
+                        Vraag {answeredQuestions}/5
+                        <Question
+                            question={selectedItem.name}
+                            description={selectedItem.description}
+                            answers={selectedItem.answers}
+                            correctAnswer={selectedItem.correctAnswer}
+                            onUpdate={handleQuestionUpdate}
+                        />
+                    </div>
                 )
-            ) : (<ScanYourCard result={score} />)}
+            ) : (<ScanYourCard direction='right' result={score} />)}
+            <div></div>
         </div>
     );
 }
