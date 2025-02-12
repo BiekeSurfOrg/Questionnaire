@@ -6,8 +6,8 @@ const Results = ({ result }) => {
     const renderRandomSentance = () => {
         const randomSentances = [
             "Je bent op de goede weg! \n Wil je meer leren? \n Scan dan hier je bezoekersbadge!",
-            "Geweldig gedaan! Je maakte een goede start, \n maar er is ruimte om nog meer te leren! \n Scan hier je bezoekersbadge!",
-            "Goed bezig! Zin om je kennis nog te verbeteren? \n Scan dan hier je bezoekersbadge of vraag meer informatie.",
+            "Geweldig gedaan!\n Je maakte een goede start, \n maar er is ruimte om nog meer te leren! \n Scan hier je bezoekersbadge!",
+            "Goed bezig!\n Zin om je kennis nog te verbeteren? \n Scan dan hier je bezoekersbadge of vraag meer informatie.",
         ];
 
         const randomIndex = Math.floor(Math.random() * randomSentances.length);
@@ -24,10 +24,7 @@ const Results = ({ result }) => {
         case 4:
             return <Result score={result} sentance={renderRandomSentance()} />;
         case 5:
-            return <Result score={result} sentance={"Goed gedaan! /n
-            Je hebt al een goede kennis,/n
-            maar wil je nog meer weten/n
-            scan dan hier je bezoekersbadge!"} />;
+            return <Result score={result} sentance={"Goed gedaan! \n Je hebt al een goede kennis,\n maar wil je nog meer weten \n scan dan hier je bezoekersbadge!"} />;
         default:
             return <h1>no results found</h1>;
     }
