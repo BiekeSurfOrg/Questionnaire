@@ -24,7 +24,10 @@ const Results = ({ result }) => {
         case 4:
             return <Result score={result} sentance={renderRandomSentance()} />;
         case 5:
-            return <Result score={result} sentance={"Goed gedaan! \n Je hebt al een goede kennis,\n maar wil je nog meer weten \n scan dan hier je bezoekersbadge!"} />;
+            return <Result score={result} sentance={"Goed gedaan! /n
+            Je hebt al een goede kennis,/n
+            maar wil je nog meer weten/n
+            scan dan hier je bezoekersbadge!"} />;
         default:
             return <h1>no results found</h1>;
     }
