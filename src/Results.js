@@ -6,8 +6,8 @@ const Results = ({ result }) => {
     const renderRandomSentance = () => {
         const randomSentances = [
             "Je bent op de goede weg! \n Wil je meer leren? \n Scan dan hier je bezoekersbadge!",
-            "Geweldig gedaan! Je maakte een goede start, \n maar er is ruimte om nog meer te leren! \n Scan hier je bezoekersbadge!",
-            "Goed bezig! Zin om je kennis nog te verbeteren? \n Scan dan hier je bezoekersbadge of vraag meer informatie.",
+            "Geweldig gedaan!\n Je maakte een goede start, \n maar er is ruimte om nog meer te leren! \n Scan hier je bezoekersbadge!",
+            "Goed bezig!\n Zin om je kennis nog te verbeteren? \n Scan dan hier je bezoekersbadge of vraag meer informatie.",
         ];
 
         const randomIndex = Math.floor(Math.random() * randomSentances.length);
