@@ -29,7 +29,7 @@ function ItemList() {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [score, setScore] = useState(0);
-    const [answeredQuestions, setansweredQuestions] = useState(0);
+    const [answeredQuestions, setansweredQuestions] = useState(1);
     const [items, setItems] = useState(questions[searchParams.get('type')]);
 
     const handleQuestionUpdate = (updatedInfo) => {
@@ -44,7 +44,7 @@ function ItemList() {
     return (
         <div className='question-list full-screen'>
             <HeaderComp />
-            <button className='backButton'> <Link to="/">Home</Link></button>
+            {/* <button className='backButton'> <Link to="/">Home</Link></button> */}
 
             {answeredQuestions < 5 ? (
                 selectedItem && (

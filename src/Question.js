@@ -14,7 +14,7 @@ function Question({ question, description, onUpdate, answers, correctAnswer }) {
 
     return (
         <div>
-            <div>
+            <div className="question">
                 <h2>{question}</h2>
                 {descriptionSplit.map((description) => <p>{description}</p>)}
                 {answers.map((currentAnswer) => (
