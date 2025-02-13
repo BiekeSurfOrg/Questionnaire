@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(20px + 2vmin);
+  font-size: calc(20px + 1.5vmin);
   color: white;
 }
 
@@ -66,12 +66,17 @@
   color: black;
 }
 
+.margin-left-right {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .scan-your-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1000px;
+  margin-bottom: 2000px;
 }
 
 .question-list {
