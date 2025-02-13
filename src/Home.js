@@ -12,7 +12,7 @@ const Home = () => {
                 <div className='tile-list'>
                     <Card text='Cyber Fraude Test' route='/questions?type=cybercrime' img={'Button1.png'} />
                     <Card text='Financiële Kennis Test' route='/questions?type=financieel' img={'Button2.png'} />
-                    <Card text='Ondernemen Kennis Test' route='/questions?type=ondernemen' img={'Button3.png'} />
+                    <Card text='Ondernemen Kennis' route='/questions?type=ondernemen' img={'Button3.png'} />
                 </div>
             </div>
         </div>
