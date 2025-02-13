@@ -1,12 +1,8 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-
+import { useRouteChange } from './navigation';
 
 const Card = ({ text, route, img }) => {
-    let navigate = useNavigate();
-    const routeChange = (path) => {
-        navigate(path);
-    }
+    const routeChange = useRouteChange();
     return (
         <div className="card" onClick={() => routeChange(route)}>
             <img src={"/assets/" + img} class="tile-image" />
