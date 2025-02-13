@@ -5,7 +5,7 @@ const ScanYourCard = ({ direction = 'right', result }) => {
     return (
         <div className="scan-your-card">
             <Results result={result} />
-            <img src="../assets/arrow.png" alt="scan your card" className={`direction-${direction}`} />
+            <img src="../assets/blue_arrow.webp" alt="scan your card" className={`direction-${direction}`} />
         </div>
     );
 };

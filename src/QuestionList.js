@@ -49,7 +49,7 @@ function ItemList() {
             {answeredQuestions < 5 ? (
                 selectedItem && (
                     <div>
-                        Vraag {answeredQuestions}/5
+                        <span className='color-black'>Vraag {answeredQuestions}/5 </span>
                         <Question
                             question={selectedItem.name}
                             description={selectedItem.description}
