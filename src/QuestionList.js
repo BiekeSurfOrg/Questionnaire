@@ -27,7 +27,7 @@ function ItemList() {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [score, setScore] = useState(0);
-    const [answeredQuestions, setansweredQuestions] = useState(0);
+    const [answeredQuestions, setansweredQuestions] = useState(1);
     const [items, setItems] = useState(questions[searchParams.get('type')]);
 
     const handleQuestionUpdate = (updatedInfo) => {
@@ -35,12 +35,7 @@ function ItemList() {
         if (updatedInfo === true) {
             setScore(score + 1)
         };
-        console.log("before " + answeredQuestions);
-
         setansweredQuestions(answeredQuestions + 1);
-
-        console.log("after " + answeredQuestions);
-
         selectQuestion()
     };
 
@@ -49,7 +44,7 @@ function ItemList() {
             <HeaderComp />
             {/* <button className='backButton'> <Link to="/">Home</Link></button> */}
 
-            {answeredQuestions < 5 ? (
+            {answeredQuestions <= 5 ? (
                 selectedItem && (
                     <div>
                         <span className='color-black'>Vraag {answeredQuestions}/5 </span>
