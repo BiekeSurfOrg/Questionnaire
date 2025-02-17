@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Result = ({ score, sentance }) => {
-    console.log(sentance);
     const splitSentence = sentance.split('\n');
     return (
         <div className='result'>

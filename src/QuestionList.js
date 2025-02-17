@@ -13,8 +13,6 @@ function ItemList() {
     const currentParam = searchParams.get('type');
 
     const selectQuestion = () => {
-        console.log(currentParam);
-        console.log(items);
         if (items.length > 0) {
             const randomIndex = Math.floor(Math.random() * items.length);
             const selectedItem = items[randomIndex];
@@ -29,7 +27,7 @@ function ItemList() {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [score, setScore] = useState(0);
-    const [answeredQuestions, setansweredQuestions] = useState(1);
+    const [answeredQuestions, setansweredQuestions] = useState(0);
     const [items, setItems] = useState(questions[searchParams.get('type')]);
 
     const handleQuestionUpdate = (updatedInfo) => {
@@ -37,7 +35,12 @@ function ItemList() {
         if (updatedInfo === true) {
             setScore(score + 1)
         };
+        console.log("before " + answeredQuestions);
+
         setansweredQuestions(answeredQuestions + 1);
+
+        console.log("after " + answeredQuestions);
+
         selectQuestion()
     };
 
